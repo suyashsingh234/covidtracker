@@ -18,6 +18,7 @@ function footer () {
               <ul class='footer-links'>
                 <li><a href='/state'>State Wise</a></li>
                 <li><a href='/precaution'>Precautions</a></li>
+                <li><a href='/symptoms'>Symptoms</a></li>
                 <li><a href='/app'>Arogya Setu</a></li>
                 <li><a href='/country'>World Wise</a></li>
                 <li><a href='/news'>News on COVID-19</a></li>
