@@ -16,11 +16,11 @@ function footer () {
             <div class='col-xs-6 col-md-3'>
               <h6>Categories</h6>
               <ul class='footer-links'>
-                <li><a>State Wise</a></li>
-                <li><a>Precautions</a></li>
-                <li><a>Arogya Setu</a></li>
-                <li><a>World Wise</a></li>
-                <li><a>News on COVID-19</a></li>
+                <li><a href='/state'>State Wise</a></li>
+                <li><a href='/precaution'>Precautions</a></li>
+                <li><a href='/app'>Arogya Setu</a></li>
+                <li><a href='/country'>World Wise</a></li>
+                <li><a href='/news'>News on COVID-19</a></li>
               </ul>
             </div>
 
