@@ -1,4 +1,5 @@
 import React from 'react'
+import Git from './images/github.png'
 import './css/footer.css'
 
 function footer () {
@@ -40,7 +41,7 @@ function footer () {
                     <a href='#'> ShelterCom</a>.
                   </p>
                 </div>
-                <a href='https://github.com/ShelterCom'><img class='foot-logo' src='images/github.png' border='0' /></a>
+                <a href='https://github.com/ShelterCom'><img class='foot-logo' src={Git} border='0' /></a>
               </div>
             </div>
           </div>
