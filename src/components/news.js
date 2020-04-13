@@ -30,7 +30,7 @@ class news extends Component {
           return (
             <div key={item.index}>
               <div class='card'>
-                <img src={item.urlToImage} alt='Image' />
+                <img src={item.urlToImage} alt='News' />
                 <div class='container'>
                   <h4><b>{item.title}</b></h4>
                   <p>{item.content} <a href={item.url}>Read more on this...</a></p>
