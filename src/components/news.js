@@ -29,9 +29,13 @@ class news extends Component {
         {this.state.news.map((item, index) => {
           return (
             <div key={item.index}>
-              <img class='i' src={item.urlToImage} />
-              <h2>{item.title}</h2>
-              <a href={item.url}>Read more on this...</a>
+              <div class='card'>
+                <img src={item.urlToImage} alt='Image' />
+                <div class='container'>
+                  <h4><b>{item.title}</b></h4>
+                  <p>{item.content} <a href={item.url}>Read more on this...</a></p>
+                </div>
+              </div>
             </div>
           )
         })}
