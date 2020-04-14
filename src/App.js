@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import Map from './components/map'
+import MapIn from './components/map'
 import Footer from './components/footer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Aarogya from './components/arogya'
@@ -16,7 +16,7 @@ function App () {
       <div className='App'>
         <Navbar />
         <Switch>
-          <Route path='/' component={Map} exact />
+          <Route path='/' component={MapIn} exact />
           <Route path='/app' component={Aarogya} />
           <Route path='/precaution' component={Precaution} />
           <Route path='/country' component={Country} />
