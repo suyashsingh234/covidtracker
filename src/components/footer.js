@@ -16,7 +16,6 @@ function footer () {
             <div className='col-xs-6 col-md-3'>
               <h6>Categories</h6>
               <ul className='footer-links'>
-                <li><a href='/state'>State Wise</a></li>
                 <li><a href='/precaution'>Precautions</a></li>
                 <li><a href='/symptoms'>Symptoms</a></li>
                 <li><a href='/app'>Arogya Setu</a></li>
