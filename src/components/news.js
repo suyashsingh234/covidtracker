@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './css/news.css'
+import Card from 'react-bootstrap/Card'
+import CardColumns from 'react-bootstrap/CardColumns'
 const fetch = require('node-fetch')
 
 class news extends Component {
@@ -24,21 +26,40 @@ class news extends Component {
   }
 
   render () {
+    let list= this.state.news.map((item, index) => {
+            return (
+              <Card>
+              <Card.Img variant="top" src={item.urlToImage} />
+              <Card.Body>
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text>
+                {item.content}
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted"><a href={item.url}>Read more on this...</a></small>
+              </Card.Footer>
+              </Card>
+            )
+          })
+    
+    let card=[], deck=[<br />];
+    
+    for(let i=0; i<list.length; i=i+3){
+
+      card= list.filter((item,idx)=>{
+        return idx>=i && idx< i+3 
+      })
+      
+      
+      deck.push(<CardColumns>{card}</CardColumns>);
+      deck.push(<br />)
+    }
+
+
     return (
       <div>
-        {this.state.news.map((item, index) => {
-          return (
-            <div key={item.index}>
-              <div class='card'>
-                <img src={item.urlToImage} alt='News' />
-                <div class='container'>
-                  <h4><b>{item.title}</b></h4>
-                  <p>{item.content} <a href={item.url}>Read more on this...</a></p>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+        {deck}
       </div>
     )
   }

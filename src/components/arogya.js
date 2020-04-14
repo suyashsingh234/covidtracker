@@ -6,7 +6,8 @@ import Code from './images/qr.jpg'
 function arogya () {
   return (
     <div>
-      <h1>Scan image below or Click the link to download Aarogya Setu</h1>
+      <br />
+      <h2>Scan image below to download Aarogya Setu</h2>
       <img id='scan' src={Code} /><br />
       <a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
         <img id='arogya' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
