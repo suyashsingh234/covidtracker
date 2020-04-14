@@ -21,11 +21,11 @@ class map extends Component {
 
   render () {
     return (
-      <div class='mapdiv'>
-        <div class='bg-modal'>
-          <div class='modal-content'>
-            <div class='close' onClick={(e) => this.clo(e)}>+</div>
-            <input class='place' disabled placeholder='' />
+      <div className='mapdiv'>
+        <div className='bg-modal'>
+          <div className='modal-content'>
+            <div className='close' onClick={(e) => this.clo(e)}>+</div>
+            <input className='place' disabled placeholder='' />
           </div>
         </div>
         <svg style={{ height: '695.70178', width: '611.85999' }}>

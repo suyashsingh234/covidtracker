@@ -21,11 +21,11 @@ class country extends Component {
 
   render () {
     return (
-      <div class='mapdiv'>
-        <div class='bg-modal'>
-          <div class='modal-content'>
-            <div class='close' onClick={(e) => this.clo(e)}>+</div>
-            <input class='place' disabled placeholder='' />
+      <div className='mapdiv'>
+        <div className='bg-modal'>
+          <div className='modal-content'>
+            <div className='close' onClick={(e) => this.clo(e)}>+</div>
+            <input className='place' disabled placeholder='' />
           </div>
         </div>
         <svg width='950px' height='620px' viewBox='0 0 950 620'>
@@ -190,7 +190,7 @@ class country extends Component {
             <path
               d='M 549.08398 310.33984 L 546.14062 305.39648 L 545.83203 301.80078 L 545.125 301.93555 L 544.93359 303.04297 L 541.07617 308.67773 L 537.99805 307.20898 L 534.92773 309.78125 L 528.57617 309.41602 L 525.76562 307.16992 L 521.73242 309.23438 L 521.58008 310.60938 L 520.34961 311.34961 L 532.66992 324.0293 L 539.38086 324.41016 L 540.35938 325.90039 L 549.96094 326.07031 L 550.03906 323.91992 L 550.85938 322.42969 L 554.06055 322.01953 L 550.07031 316.23047 L 547.13086 316.23047 L 546.38086 312.11914 L 548.74023 311.08008 L 549.08398 310.33984 z '
               id='south_sudan'
-              inkscapeLabel='#south sudan'
+              inkscapelabel='#south sudan'
             />
           </a>
           <a xlinkTitle='sudan' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
@@ -2023,42 +2023,42 @@ class country extends Component {
               id='serbia'
             ><desc id='desc7821'>includes kosovo</desc>
             </path>
-            <a xlinkTitle='bulgaria' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='bulgaria'
-                d='M511.44,202.39l0.16,4.98l1.68,3.5l6.31,0.11l2.84-2.01l2.79-1.11l-0.68-3.18l0.63-1.7l-1.42-0.74l-1.95,0.16l-1.53,1.54l-6.42,0.05L511.44,202.39L511.44,202.39z'
-              />
-            </a>
-            <a xlinkTitle='albania' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='albania'
-                d='M504.02,209.76v4.61l1.32,2.49l0.95-0.11l1.63-2.97l-0.95-1.33l-0.37-3.29l-1.26-1.17L504.02,209.76L504.02,209.76z'
-              />
-            </a>
-            <a xlinkTitle='macedonia' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='macedonia'
-                d='M510.92,208.01l-3.37,1.11l0.16,2.86l0.79,1.01l4-1.86L510.92,208.01L510.92,208.01z'
-              />
-            </a>
-            <a xlinkTitle='greece' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='greece'
-                d='M506.71,217.6l-0.11,1.33l4.63,2.33l2.21,0.85l-1.16,1.22l-2.58,0.26l-0.37,1.17l0.89,2.01l2.89,1.54l1.26,0.11l0.16-3.45l1.89-2.28l-5.16-6.1l0.68-2.07l1.21-0.05l1.84,1.48l1.16-0.58l0.37-2.07l5.42,0.05l0.21-3.18l-2.26,1.59l-6.63-0.16l-4.31,2.23L506.71,217.6L506.71,217.6z'
-              />
-            </a>
-            <a xlinkTitle='thrace' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='thrace'
-                d='M523.02,209.7l-0.16,3.55l3.1-0.95l1.42-0.95l-0.42-1.54l-1.47-1.17L523.02,209.7L523.02,209.7z'
-              />
-            </a>
-            <a xlinkTitle='crete' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
-              <path
-                id='crete'
-                d='M516.76,230.59l1.63,0.05l0.68,1.01h2.37l1.58-0.58l0.53,0.64l-1.05,1.38l-4.63,0.16l-0.84-1.11l-0.89-0.53L516.76,230.59L516.76,230.59z'
-              />
-            </a>
+          </a>
+          <a xlinkTitle='bulgaria' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='bulgaria'
+              d='M511.44,202.39l0.16,4.98l1.68,3.5l6.31,0.11l2.84-2.01l2.79-1.11l-0.68-3.18l0.63-1.7l-1.42-0.74l-1.95,0.16l-1.53,1.54l-6.42,0.05L511.44,202.39L511.44,202.39z'
+            />
+          </a>
+          <a xlinkTitle='albania' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='albania'
+              d='M504.02,209.76v4.61l1.32,2.49l0.95-0.11l1.63-2.97l-0.95-1.33l-0.37-3.29l-1.26-1.17L504.02,209.76L504.02,209.76z'
+            />
+          </a>
+          <a xlinkTitle='macedonia' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='macedonia'
+              d='M510.92,208.01l-3.37,1.11l0.16,2.86l0.79,1.01l4-1.86L510.92,208.01L510.92,208.01z'
+            />
+          </a>
+          <a xlinkTitle='greece' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='greece'
+              d='M506.71,217.6l-0.11,1.33l4.63,2.33l2.21,0.85l-1.16,1.22l-2.58,0.26l-0.37,1.17l0.89,2.01l2.89,1.54l1.26,0.11l0.16-3.45l1.89-2.28l-5.16-6.1l0.68-2.07l1.21-0.05l1.84,1.48l1.16-0.58l0.37-2.07l5.42,0.05l0.21-3.18l-2.26,1.59l-6.63-0.16l-4.31,2.23L506.71,217.6L506.71,217.6z'
+            />
+          </a>
+          <a xlinkTitle='thrace' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='thrace'
+              d='M523.02,209.7l-0.16,3.55l3.1-0.95l1.42-0.95l-0.42-1.54l-1.47-1.17L523.02,209.7L523.02,209.7z'
+            />
+          </a>
+          <a xlinkTitle='crete' onClick={(e) => this.customAlert('this.xlinkTitle', e)}>
+            <path
+              id='crete'
+              d='M516.76,230.59l1.63,0.05l0.68,1.01h2.37l1.58-0.58l0.53,0.64l-1.05,1.38l-4.63,0.16l-0.84-1.11l-0.89-0.53L516.76,230.59L516.76,230.59z'
+            />
           </a>
         </svg>
       </div>
