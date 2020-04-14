@@ -10,7 +10,7 @@ function precautions () {
       <br />
       <Container fluid>
         <Row>
-          <Col sm>       
+          <Col sm>
             <h3>Wash Hands</h3>
             <br />
             <iframe title='wash' src='https://giphy.com/embed/l4EoN7SOIXm7l3Og0' width='480' height='360' frameBorder='0' class='giphy-embed' allowFullScreen />
@@ -32,7 +32,7 @@ function precautions () {
         </Row>
         <br /><br />
         <Row>
-        <br />
+          <br />
           <Col>
             <h3>Cover mouth while sneezing or coughing</h3>
             <br />
