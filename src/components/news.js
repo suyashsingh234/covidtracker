@@ -26,36 +26,32 @@ class news extends Component {
   }
 
   render () {
-    let list= this.state.news.map((item, index) => {
-            return (
-              <Card>
-              <Card.Img variant="top" src={item.urlToImage} />
-              <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
-                <Card.Text>
-                {item.content}
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted"><a href={item.url}>Read more on this...</a></small>
-              </Card.Footer>
-              </Card>
-            )
-          })
-    
-    let card=[], deck=[<br />];
-    
-    for(let i=0; i<list.length; i=i+3){
+    const list = this.state.news.map((item, index) => {
+      return (
+        <Card key={item.index}>
+          <Card.Img variant='top' src={item.urlToImage} />
+          <Card.Body>
+            <Card.Title>{item.title}</Card.Title>
+            <Card.Text>
+              {item.content}
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className='text-muted'><a href={item.url}>Read more on this...</a></small>
+          </Card.Footer>
+        </Card>
+      )
+    })
 
-      card= list.filter((item,idx)=>{
-        return idx>=i && idx< i+3 
+    let card = []; const deck = [<br />]
+    for (let i = 0; i < list.length; i = i + 3) {
+      card = list.filter((item, idx) => {
+        return idx >= i && idx < i + 3
       })
-      
-      
-      deck.push(<CardColumns>{card}</CardColumns>);
+
+      deck.push(<CardColumns>{card}</CardColumns>)
       deck.push(<br />)
     }
-
 
     return (
       <div>
