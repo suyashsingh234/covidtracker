@@ -28,7 +28,7 @@ class map extends Component {
             <input class='place' disabled placeholder='' />
           </div>
         </div>
-        <svg height='695.70178' width='611.85999'>
+        <svg style={{ height: '695.70178', width: '611.85999' }}>
           <a xlinkTitle='Andaman and Nicobar Islands' onClick={(e) => this.customAlert('Andaman and Nicobar Islands', e)}>
             <path
               id='IN-AN'

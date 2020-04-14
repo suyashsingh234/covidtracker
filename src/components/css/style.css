@@ -1,10 +1,9 @@
-body{
-    background-color: aqua;
+svg{
+	padding-left: 50%;
 }
 .mapdiv{
-    margin: auto;
+    background-color: skyblue;
 }
-
 .mapdiv path{
     fill: crimson;
     stroke: black;
