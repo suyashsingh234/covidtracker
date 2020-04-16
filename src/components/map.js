@@ -1,17 +1,33 @@
 import React, { Component } from 'react'
 import './css/style.css'
+const fetch = require('node-fetch')
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+var targetUrl = 'https://indiancoviddata.herokuapp.com/'
 
 class map extends Component {
   constructor (props) {
     super(props)
     this.customAlert = this.customAlert.bind(this)
     this.clo = this.clo.bind(this)
+    this.state = {
+      india: []
+    }
+  }
+
+  componentDidMount () {
+    fetch(proxyUrl + targetUrl)
+      .then((res) => res.json())
+      .then((json) => {
+        this.setState({
+          india: json
+        })
+      })
   }
 
   customAlert (msg, e) {
     e.preventDefault()
     document.querySelector('.bg-modal').style.display = 'flex'
-    document.querySelector('.place').placeholder = msg
+    document.querySelector('.place').value = msg
   }
 
   clo (e) {
@@ -25,7 +41,7 @@ class map extends Component {
         <div className='bg-modal'>
           <div className='modal-content'>
             <div className='close' onClick={(e) => this.clo(e)}>+</div>
-            <input className='place' disabled placeholder='' />
+            <input className='place' disabled value='' />
           </div>
         </div>
         <svg style={{ height: '695.70178', width: '611.85999' }}>
