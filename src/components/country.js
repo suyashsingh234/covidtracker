@@ -1,32 +1,58 @@
 import React, { Component } from 'react'
+import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 import './css/country.css'
+const fetch = require('node-fetch')
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+var targetUrl = 'https://indiancoviddata.herokuapp.com/'
 
 class country extends Component {
   constructor (props) {
     super(props)
     this.customAlert = this.customAlert.bind(this)
-    this.clo = this.clo.bind(this)
+    this.state = {
+      world: [],
+      show: false,
+      idx: 0
+    }
+  }
+
+  componentDidMount () {
+    fetch(proxyUrl + targetUrl)
+      .then((res) => res.json())
+      .then((json) => {
+        this.setState({
+          world: json
+        })
+      })
   }
 
   customAlert (msg, e) {
     e.preventDefault()
     document.querySelector('.bg-modal').style.display = 'flex'
-    document.querySelector('.place').placeholder = msg
-  }
-
-  clo (e) {
-    e.preventDefault()
-    document.querySelector('.bg-modal').style.display = 'none'
+    this.setState({ show: true, idx: msg })
   }
 
   render () {
+    const alert =
+      <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
+        <Alert.Heading><b>{this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.state).toString()}</b></Alert.Heading>
+        <p>
+          <b>Total Cases:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
+          <b>Cured:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.cured).toString()}<br />
+          <b>Deaths:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.death).toString()}
+        </p>
+        <hr />
+        <div className='d-flex justify-content-end'>
+          <Button onClick={() => { this.setState({ show: false }); document.querySelector('.bg-modal').style.display = 'none' }} variant='outline-info'>
+                    Close me!
+          </Button>
+        </div>
+      </Alert>
     return (
       <div className='mapdiv'>
         <div className='bg-modal'>
-          <div className='modal-content'>
-            <div className='close' onClick={(e) => this.clo(e)}>+</div>
-            <input className='place' disabled placeholder='' />
-          </div>
+          {alert}
         </div>
         <svg width='950px' height='620px' viewBox='0 0 950 620'>
 
