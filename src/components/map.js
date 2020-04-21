@@ -30,30 +30,31 @@ class map extends Component {
   customAlert (msg, e) {
     e.preventDefault()
     document.querySelector('.bg-modal').style.display = 'flex'
-    this.setState({show: true, idx: msg});
+    this.setState({ show: true, idx: msg })
   }
 
   render () {
-    const alert=<Alert show={this.state.show} variant="info" style={{ width: '30rem' }}>
-                <Alert.Heading><b>{ this.state.india.filter((item,i)=> this.state.idx==i).map((item)=> item.state).toString() }</b></Alert.Heading>
-                <p>
-                <b>Total Cases:</b> { this.state.india.filter((item,i)=> this.state.idx==i).map((item)=> item.cases).toString() }<br />
-                <b>Cured:</b> { this.state.india.filter((item,i)=> this.state.idx==i).map((item)=> item.cured).toString() }<br />
-                <b>Deaths:</b> { this.state.india.filter((item,i)=> this.state.idx==i).map((item)=> item.death).toString() }
-                </p>
-                <hr />
-                <div className="d-flex justify-content-end">
-                  <Button onClick={() => {this.setState({ show: false }); document.querySelector('.bg-modal').style.display = 'none'}} variant="outline-info">
+    const alert =
+      <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
+        <Alert.Heading><b>{this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.state).toString()}</b></Alert.Heading>
+        <p>
+          <b>Total Cases:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
+          <b>Cured:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cured).toString()}<br />
+          <b>Deaths:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.death).toString()}
+        </p>
+        <hr />
+        <div className='d-flex justify-content-end'>
+          <Button onClick={() => { this.setState({ show: false }); document.querySelector('.bg-modal').style.display = 'none' }} variant='outline-info'>
                     Close me!
-                  </Button>
-                </div>
-              </Alert>;
+          </Button>
+        </div>
+      </Alert>
 
     return (
       <div className='mapdiv'>
-          <div className='bg-modal'>
-            {alert}
-          </div>
+        <div className='bg-modal'>
+          {alert}
+        </div>
         <svg style={{ height: '695.70178', width: '611.85999' }}>
           <a xlinkTitle='Andaman and Nicobar Islands' onClick={(e) => this.customAlert(0, e)}>
             <path
