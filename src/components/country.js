@@ -1,30 +1,19 @@
 import React, { Component } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
+import data from './json/world.json'
 import './css/country.css'
-const fetch = require('node-fetch')
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-var targetUrl = 'https://indiancoviddata.herokuapp.com/'
+
+var world = Array.from(data)
 
 class country extends Component {
   constructor (props) {
     super(props)
     this.customAlert = this.customAlert.bind(this)
     this.state = {
-      world: [],
       show: false,
       idx: 0
     }
-  }
-
-  componentDidMount () {
-    fetch(proxyUrl + targetUrl)
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          world: json
-        })
-      })
   }
 
   customAlert (msg, e) {
@@ -36,11 +25,11 @@ class country extends Component {
   render () {
     const alert =
       <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
-        <Alert.Heading><b>{this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.state).toString()}</b></Alert.Heading>
+        <Alert.Heading><b>{world.filter((item, i) => this.state.idx == i).map((item) => item.country).toString()}</b></Alert.Heading>
         <p>
-          <b>Total Cases:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
-          <b>Cured:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.cured).toString()}<br />
-          <b>Deaths:</b> {this.state.world.filter((item, i) => this.state.idx === i).map((item) => item.death).toString()}
+          <b>Total Cases:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.cases).toString()}<br />
+          <b>Deaths:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.dead).toString()}<br />
+          <b>Cured:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.recovered).toString()}
         </p>
         <hr />
         <div className='d-flex justify-content-end'>
@@ -1647,9 +1636,9 @@ class country extends Component {
               d='M623.13,249.84l2.6,3.86l-0.25,1.99l-3.46,1.37l-0.25,3.24h3.96l1.36-1.12h7.54l6.8,5.98l0.87-2.87h5.07l0.12-3.61l-5.19-4.98l1.11-2.74l5.32-0.37l7.17-14.95l-3.96-3.11l-1.48-5.23l9.64-0.87l-5.69-8.1l-3.03-0.82l-1.24,1.5l-0.93,0.07l-5.69,3.61l1.86,3.12l-2.1,2.24l-2.6,9.59l-6.43,4.11l-0.87,4.49L623.13,249.84L623.13,249.84z'
             />
           </a>
-          <a xlinkTitle='india' onClick={(e) => this.customAlert('india', e)}>
+          <a xlinkTitle='India' onClick={(e) => this.customAlert('India', e)}>
             <path
-              id='india'
+              id='India'
               d='M670.98,313.01l4.58-2.24l2.72-9.84l-0.12-12.08l15.58-16.82v-3.99l3.21-1.25l-0.12-4.61l-3.46-6.73l1.98-3.61l4.33,3.99l5.56,0.25v2.24l-1.73,1.87l0.37,1l2.97,0.12l0.62,3.36h0.87l2.23-3.99l1.11-10.46l3.71-2.62l0.12-3.61l-1.48-2.87l-2.35-0.12l-9.2,6.08l0.58,3.91l-6.46-0.02l-2.28-2.79l-1.24,0.16l0.42,3.88l-13.97-1l-8.66-3.86l-0.46-4.75l-5.77-3.58l-0.07-7.37l-3.96-4.53l-9.1,0.87l0.99,3.96l4.46,3.61l-7.71,15.78l-5.16,0.39l-0.85,1.9l5.08,4.7l-0.25,4.75l-5.19-0.08l-0.56,2.36l4.31-0.19l0.12,1.87l-3.09,1.62l1.98,3.74l3.83,1.25l2.35-1.74l1.11-3.11l1.36-0.62l1.61,1.62l-0.49,3.99l-1.11,1.87l0.25,3.24L670.98,313.01L670.98,313.01z'
             />
           </a>
