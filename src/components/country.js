@@ -31,8 +31,8 @@ class country extends Component {
         <Alert.Heading><b>{this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.country).toString()}</b></Alert.Heading>
         <p>
           <b>Total Cases:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.cases).toString()}<br />
-          <b>Deaths:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.dead).toString()}<br />
-          <b>Cured:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.recovered).toString()}
+          <b>Deaths:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.death).toString()}<br />
+          <b>Cured:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.cured).toString()}
         </p>
         <hr />
         <div className='d-flex justify-content-end'>
