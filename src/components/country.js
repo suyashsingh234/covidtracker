@@ -3,7 +3,7 @@ import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import data from './json/world.json'
 import './css/country.css'
- 
+
 var world = Array.from(data)
 
 class country extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from './json/world.json'
+import data from './json/worlddata.json'
 import './css/countrydata.css'
 
 class countrydata extends Component {
@@ -21,8 +21,8 @@ class countrydata extends Component {
                   <td>{worldData.index}</td>
                   <td>{worldData.country}</td>
                   <td>{worldData.cases}</td>
-                  <td>{worldData.dead}</td>
-                  <td>{worldData.recovered}</td>
+                  <td>{worldData.death}</td>
+                  <td>{worldData.cured}</td>
                 </tr>
               )
             })
