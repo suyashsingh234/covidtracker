@@ -9,12 +9,13 @@ function Navbar () {
         <ReactBootstrap.Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <ReactBootstrap.Navbar.Collapse id='responsive-navbar-nav'>
           <ReactBootstrap.Nav className='mr-auto'>
+            <ReactBootstrap.Nav.Link href='/countryStats'>World Stats</ReactBootstrap.Nav.Link>
             <ReactBootstrap.Nav.Link href='/precaution'>Precautions</ReactBootstrap.Nav.Link>
             <ReactBootstrap.Nav.Link href='/symptoms'>Symptoms</ReactBootstrap.Nav.Link>
             <ReactBootstrap.Nav.Link href='/app'>Aarogya Setu</ReactBootstrap.Nav.Link>
           </ReactBootstrap.Nav>
           <ReactBootstrap.Nav>
-            <ReactBootstrap.Nav.Link href='/country'>See country wise</ReactBootstrap.Nav.Link>
+            <ReactBootstrap.Nav.Link href='/country'>World Map</ReactBootstrap.Nav.Link>
             <ReactBootstrap.Nav.Link eventKey={2} href='/news'>
             News
             </ReactBootstrap.Nav.Link>

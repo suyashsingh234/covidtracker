@@ -9,6 +9,8 @@ import Precaution from './components/precautions'
 import Country from './components/country'
 import News from './components/news'
 import Symptom from './components/symptoms'
+import CountryData from './components/countrydata'
+import PageNotFound from './components/PageNotFound'
 
 function App () {
   return (
@@ -22,6 +24,8 @@ function App () {
           <Route path='/country' component={Country} />
           <Route path='/news' component={News} />
           <Route path='/symptoms' component={Symptom} />
+          <Route path='/countryStats' component={CountryData} />
+          <Route path='*' component={PageNotFound} />
         </Switch>
         <Footer />
       </div>
