@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import './css/style.css'
-const fetch = require('node-fetch')
 
 class map extends Component {
   constructor (props) {
@@ -17,7 +16,7 @@ class map extends Component {
   }
 
   componentDidMount () {
-    this.setState({india: data})
+    this.setState({ india: data })
   }
 
   customAlert (msg, e) {
@@ -29,11 +28,16 @@ class map extends Component {
   render () {
     const alert =
       <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
-        <Alert.Heading><b>{this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.state).toString()}</b></Alert.Heading>
+        <Alert.Heading>
+          <b>{this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.state).toString()}</b>
+        </Alert.Heading>
         <p>
-          <b>Total Cases:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
-          <b>Cured:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cured).toString()}<br />
-          <b>Deaths:</b> {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.death).toString()}
+          <b>Total Cases:</b>
+          {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
+          <b>Cured:</b>
+          {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.cured).toString()}<br />
+          <b>Deaths:</b>
+          {this.state.india.filter((item, i) => this.state.idx === i).map((item) => item.death).toString()}
         </p>
         <hr />
         <div className='d-flex justify-content-end'>

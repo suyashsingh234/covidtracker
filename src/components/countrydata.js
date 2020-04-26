@@ -21,8 +21,8 @@ class countrydata extends Component {
                   <td>{worldData.index}</td>
                   <td>{worldData.country}</td>
                   <td>{worldData.cases}</td>
-                  <td>{worldData.death}</td>
-                  <td>{worldData.cured}</td>
+                  <td>{worldData.dead}</td>
+                  <td>{worldData.recovered}</td>
                 </tr>
               )
             })

@@ -40,7 +40,7 @@ function symptoms () {
           <Col sm>
             <h3>Shortness of Breath</h3>
             <br />
-            <iframe title='breath' src='https://giphy.com/embed/YURXbwMSzBs5i' width='480' height='360' frameBorder='0' class='giphy-embed' allowFullScreen />
+            <iframe src='https://giphy.com/embed/KhK0dtcWKJ1pS' width='480' height='360' frameBorder='0' class='giphy-embed' allowFullScreen />
             <br />
           </Col>
           <Col sm>
