@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
-import data from './json/world.json'
+import data2 from './json/worlddata.json'
 import './css/country.css'
-
-var world = Array.from(data)
 
 class country extends Component {
   constructor (props) {
     super(props)
     this.customAlert = this.customAlert.bind(this)
     this.state = {
+      world: [],
       show: false,
       idx: 0
     }
+  }
+
+  componentDidMount () {
+    this.setState({world: data2})
   }
 
   customAlert (msg, e) {
@@ -25,11 +28,11 @@ class country extends Component {
   render () {
     const alert =
       <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
-        <Alert.Heading><b>{world.filter((item, i) => this.state.idx == i).map((item) => item.country).toString()}</b></Alert.Heading>
+        <Alert.Heading><b>{this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.country).toString()}</b></Alert.Heading>
         <p>
-          <b>Total Cases:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.cases).toString()}<br />
-          <b>Deaths:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.dead).toString()}<br />
-          <b>Cured:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.recovered).toString()}
+          <b>Total Cases:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.cases).toString()}<br />
+          <b>Deaths:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.dead).toString()}<br />
+          <b>Cured:</b> {this.state.world.filter((item, i) => this.state.idx == i).map((item) => item.recovered).toString()}
         </p>
         <hr />
         <div className='d-flex justify-content-end'>
@@ -1408,9 +1411,9 @@ class country extends Component {
               d='M158.22,48.66l1.99,3.01l1,4.02l4.98,1.25l3.49-3.76l2.99,1.51l8.47,0.75l5.98-2.51l1,8.28h3.49V57.7l3.49,0.25l8.72,10.29l5.73,3.51l-2.99,4.77l1.25,1.25L219,80.03l0.25,5.02l2.99,0.5l0.75-7.53l4.73-1.25l3.49,5.27l7.47,3.51l3.74,0.75l2.49-3.01l0.25-4.77l4.48-2.76l1.49,4.02l-3.99,7.03l0.5,3.51l2.24-3.51l4.48-4.02l0.25-5.27l-2.49-4.02l0.75-3.26l5.98-3.01l2.74,2.01l0.5,17.57l4.23-3.76l2.49,1.51l-3.49,6.02l4.48,1l6.48-10.04l5.48,5.77l-2.24,10.29l-5.48,3.01l-5.23-2.51l-9.46,2.01l1,3.26l-2.49,4.02l-7.72,1.76l-8.72,6.78l-7.72,10.29l-1,3.26l5.23,2.01l1.99,5.02l7.22,7.28l11.46,5.02l-2.49,11.54l-0.25,3.26l2.99,2.01l3.99-5.27l0.5-10.04l6.23-0.25l2.99-5.77l0.5-8.78l7.97-15.56l9.96,3.51l5.23,7.28l-2.24,7.28l3.99,2.26l9.71-6.53l2.74,17.82l8.97,10.79l0.25,5.52l-9.96,2.51l-4.73,5.02l-9.96-2.26l-4.98-0.25l-8.72,6.78l5.23-1.25l6.48-1.25l1.25,1.51l-1.74,5.52l0.25,5.02l2.99,2.01l2.99-0.75l1.5-2.26h1.99l-3.24,6.02l-6.23,0.25l-2.74,4.02h-3.49l-1-3.01l4.98-5.02l-5.98,2.01l-0.27-8.53l-1.72-1l-5.23,2.26l-0.5,4.27h-11.96l-10.21,7.03l-13.7,4.52l-1.49-2.01l6.9-10.3l-3.92-3.77l-2.49-4.78l-5.07-3.87l-5.44-0.45l-9.75-6.83l-70.71-11.62l-1.17-4.79l-6.48-6.02v-5.02l1-4.52l-0.5-2.51l-2.49-2.51l-0.5-4.02l6.48-4.52l-3.99-21.58l-5.48-0.25l-4.98-6.53L158.22,48.66L158.22,48.66z'
             />
           </a>
-          <a xlinkTitle='usa' onClick={(e) => this.customAlert('usa', e)}>
+          <a xlinkTitle='United States' onClick={(e) => this.customAlert('United States', e)}>
             <path
-              id='usa'
+              id='United States'
               d='M148.76,158.34l-1,4.02l-3.49-2.26h-1.74l-1,4.27l-12.21,27.36l3.24,23.84l3.99,2.01l0.75,6.53h8.22l7.97,6.02l15.69,1.51l1.74,8.03l2.49,1.76l3.49-3.51l2.74,1.25l2.49,11.54l4.23,2.76l3.49-6.53l10.71-7.78l6.97,3.26l5.98,0.5l0.25-3.76l12.45,0.25l2.49,2.76l0.5,6.27l-1.49,3.51l1.74,6.02h3.74l3.74-5.77l-1.49-2.76l-1.49-6.02l2.24-6.78l10.21-8.78l7.72-2.26l-1-7.28l10.71-11.55l10.71-1.76L272.8,199l10.46-6.02v-8.03l-1-0.5l-3.74,1.25l-0.5,4.92l-12.43,0.15l-9.74,6.47l-15.29,5l-2.44-2.99l6.94-10.5l-3.43-3.27l-2.33-4.44l-4.83-3.88l-5.25-0.44l-9.92-6.77L148.76,158.34L148.76,158.34z'
             />
           </a>

@@ -1,10 +1,9 @@
+import data from './json/indiadata.json'
 import React, { Component } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import './css/style.css'
 const fetch = require('node-fetch')
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-var targetUrl = 'https://indiancoviddata.herokuapp.com/'
 
 class map extends Component {
   constructor (props) {
@@ -18,13 +17,7 @@ class map extends Component {
   }
 
   componentDidMount () {
-    fetch(proxyUrl + targetUrl)
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          india: json
-        })
-      })
+    this.setState({india: data})
   }
 
   customAlert (msg, e) {
