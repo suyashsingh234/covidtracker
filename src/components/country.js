@@ -25,11 +25,11 @@ class country extends Component {
   render () {
     const alert =
       <Alert show={this.state.show} variant='info' style={{ width: '30rem' }}>
-        <Alert.Heading><b>{world.filter((item, i) => this.state.idx == i).map((item) => item.country).toString()}</b></Alert.Heading>
+        <Alert.Heading><b>{world.filter((item, i) => this.state.idx === i).map((item) => item.country).toString()}</b></Alert.Heading>
         <p>
-          <b>Total Cases:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.cases).toString()}<br />
-          <b>Deaths:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.dead).toString()}<br />
-          <b>Cured:</b> {world.filter((item, i) => this.state.idx == i).map((item) => item.recovered).toString()}
+          <b>Total Cases:</b> {world.filter((item, i) => this.state.idx === i).map((item) => item.cases).toString()}<br />
+          <b>Deaths:</b> {world.filter((item, i) => this.state.idx === i).map((item) => item.dead).toString()}<br />
+          <b>Cured:</b> {world.filter((item, i) => this.state.idx === i).map((item) => item.recovered).toString()}
         </p>
         <hr />
         <div className='d-flex justify-content-end'>
