@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import MapIn from './components/map'
 import Footer from './components/footer'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import Aarogya from './components/arogya'
 import Precaution from './components/precautions'
 import Country from './components/country'
@@ -14,7 +14,7 @@ import PageNotFound from './components/PageNotFound'
 
 function App () {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='App'>
         <Navbar />
         <Switch>
@@ -29,7 +29,7 @@ function App () {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

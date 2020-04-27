@@ -1,5 +1,6 @@
 import React from 'react'
 import Git from './images/github.png'
+import { Link } from 'react-router-dom'
 import './css/footer.css'
 
 function footer () {
@@ -16,12 +17,12 @@ function footer () {
             <div className='col-xs-6 col-md-3'>
               <h6>Categories</h6>
               <ul className='footer-links'>
-                <li><a href='/precaution'>Precautions</a></li>
-                <li><a href='/symptoms'>Symptoms</a></li>
-                <li><a href='/app'>Arogya Setu</a></li>
-                <li><a href='/country'>World Map</a></li>
-                <li><a href='/countryStats'>World Stats</a></li>
-                <li><a href='/news'>News on COVID-19</a></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/precaution'>Precautions</Link></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/symptoms'>Symptoms</Link></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/app'>Aarogya Setu</Link></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/country'>World Map</Link></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/countryStats'>World Stats</Link></li>
+                <li><Link style={{ textDecoration: 'inherit', color: 'inherit' }} className='lessblue' to='/news'>News</Link></li>
               </ul>
             </div>
 
