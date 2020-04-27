@@ -14,7 +14,7 @@ class news extends Component {
   }
 
   componentDidMount () {
-    fetch('http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=0ca51b34c21d4020bbd2f834460f4743')
+    fetch('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=0ca51b34c21d4020bbd2f834460f4743')
       .then((response) => {
         return response.json()
       })
