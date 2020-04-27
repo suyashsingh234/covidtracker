@@ -2,7 +2,7 @@ index,country,cases,dead,recovered
 1,United States,985975,55417,109311
 2,Spain,209465,23521,100875
 3,Italy,197675,26644,64928
-4,Germany,157770,5976,106062
+4,Germany,157781,5976,106062
 5,United Kingdom,152840,20732,—
 6,France,124575,22856,44903
 7,Turkey,110130,2805,29140
@@ -11,7 +11,7 @@ index,country,cases,dead,recovered
 10,China,82830,4633,77474
 11,Brazil,62859,4271,30152
 12,Canada,46895,2560,17321
-13,Belgium,46134,7094,10785
+13,Belgium,46687,7207,10878
 14,Netherlands,37845,4475,—
 15,Switzerland,28683,1610,21800
 16,India,27892,872,6185
@@ -21,16 +21,16 @@ index,country,cases,dead,recovered
 20,Ireland,19262,1087,9233
 21,Sweden,18640,2194,550
 22,Saudi Arabia,17522,139,2357
-23,Israel,15443,201,6731
+23,Israel,15466,202,6796
 24,Austria,15188,542,12282
 25,Singapore,14423,12,1060
 26,Mexico,13842,1305,2627
-27,Japan,13441,372,2536
+27,Japan,13585,383,2905
 28,Chile,13331,189,7024
 29,Pakistan,13323,281,3029
 30,Poland,11617,535,2265
-31,Belarus,11289,75,1740
-32,Romania,11036,619,3054
+31,Romania,11339,631,3141
+32,Belarus,11289,75,1740
 33,South Korea,10738,243,8764
 34,United Arab Emirates,10349,76,1978
 35,Qatar,10287,10,1012
@@ -45,7 +45,7 @@ index,country,cases,dead,recovered
 44,Dominican Republic,6135,278,910
 45,Malaysia,5820,99,3957
 46,Panama,5779,165,369
-47,Bangladesh,5416,145,122
+47,Bangladesh,5913,152,131
 48,Colombia,5379,244,1133
 49,Finland,4576,190,2500
 50,South Africa,4546,87,1473
@@ -92,7 +92,7 @@ index,country,cases,dead,recovered
 91,Latvia,812,12,267
 92,Kosovo,763,21,166
 93,Andorra,738,40,344
-94,Albania,726,28,410
+94,Albania,736,28,422
 95,Lebanon,707,24,145
 96,Niger,696,29,350
 97,Costa Rica,695,6,264
@@ -112,7 +112,7 @@ index,country,cases,dead,recovered
 111,Somalia,436,23,10
 112,Taiwan,429,6,290
 113,Mali,389,23,112
-114,Kenya,355,14,106
+114,Kenya,363,14,114
 115,Mauritius,332,9,299
 116,Venezuela,325,10,137
 117,Montenegro,321,7,153
@@ -137,7 +137,7 @@ index,country,cases,dead,recovered
 136,Brunei,138,1,121
 137,Liberia,124,12,25
 138,Madagascar,124,0,71
-139,Ethiopia,123,3,41
+139,Ethiopia,124,3,50
 140,Cambodia,122,0,119
 141,Trinidad & Tobago,115,8,53
 142,Bermuda,109,5,39
@@ -210,7 +210,7 @@ index,country,cases,dead,recovered
 209,South Sudan,6,0,0
 210,São Tomé & Príncipe,4,0,0
 211,Abkhazia,3,0,2
-212,Anguilla,3,0,1
+212,Anguilla,3,0,3
 213,Bonaire,2,0,1
 214,Saba,2,0,0
 215,Sint Eustatius,2,0,1
